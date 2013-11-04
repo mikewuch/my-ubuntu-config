@@ -49,19 +49,26 @@ heroku
 history
 terminitor
 urltools
-vi-mode
+#vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
+source ~/.nvm/nvm.sh
 
 # Customize to your needs...
 export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/mwu/.rvm/bin
-
-#eval `dircolors ~/.dircolors-solarized/dircolors.ansi-dark`
-eval `dircolors ~/.dircolors-solarized/dircolors.bright`
+export JAVA_HOME='/home/mwu/.jenv/candidates/java/current/bin/java'
+ 
+eval `dircolors ~/.dircolors-solarized/dircolors.ansi-dark`
 
 export TERM=xterm-256color        # for common 256 color terminals (e.g. gnome-terminal)
 export TERM=screen-256color       # for a tmux -2 session (also for screen)
 export TERM=rxvt-unicode-256color # for a colorful rxvt unicode session
 
+# key bindings
+bindkey '^a' beginning-of-line
+bindkey '^e' end-of-line
+bindkey '^R' history-incremental-search-backward
 	
+#THIS MUST BE AT THE END OF THE FILE FOR JENV TO WORK!!!
+[[ -s "/home/mwu/.jenv/bin/jenv-init.sh" ]] && source "/home/mwu/.jenv/bin/jenv-init.sh" && source "/home/mwu/.jenv/commands/completion.sh"

@@ -170,8 +170,10 @@ noremap   <silent> cu      :s,^\(\s*\)# \s\@!,\1,e<CR>:nohls<CR>zvj
  Bundle 'msanders/snipmate.vim'
  " Tab completion
  " Bundle 'ervandew/supertab' 
- " Vim themes
+
+ " git clone git://github.com/altercation/vim-colors-solarized.git
  " Bundle 'altercation/vim-colors-solarized'
+
  " Bundle 'Valloric/YouCompleteMe'
  " git repos on your local machine (ie. when working on your own plugin)
  " Bundle 'file:///Users/gmarik/path/to/plugin'
@@ -190,16 +192,14 @@ noremap   <silent> cu      :s,^\(\s*\)# \s\@!,\1,e<CR>:nohls<CR>zvj
  
 
  " GUI/TERMINAL ENVIRONMENT SETTINGS
- syntax on
 
- " if has("gui_running")
- "   set guioptions=egmrt
- "   set guifont=Inconsolata:h18
- " else
-  "  set t_Co=256
-  " set background=dark
-  " colorscheme solarized
- " endif
+ if has("gui_running")
+   set guioptions=egmrt
+   set guifont=Inconsolata:h18
+ else
+ 	 set t_Co=256
+ 	 set background=dark
+ endif
 
  " In many terminal emulators the mouse works just fine, thus enable it.
  if has('mouse')

@@ -114,3 +114,9 @@ if ! shopt -oq posix; then
 fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/home/mwu/.gvm/bin/gvm-init.sh" ]] && source "/home/mwu/.gvm/bin/gvm-init.sh"
+
+#THIS MUST BE AT THE END OF THE FILE FOR JENV TO WORK!!!
+[[ -s "/home/mwu/.jenv/bin/jenv-init.sh" ]] && source "/home/mwu/.jenv/bin/jenv-init.sh" && source "/home/mwu/.jenv/commands/completion.sh"
